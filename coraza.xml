@@ -1,0 +1,17 @@
+<decoder name="Coraza">
+        <prematch>Coraza</prematch>
+        <regex>[(\.+)][\.+][(\.+)][\.+]\.+:</regex>
+        <order>timeandate,state</order>
+</decoder>
+
+<decoder name="Coraza:Child">
+        <parent>Coraza</parent>
+        <regex>[client \\"(\.+)\\"] Coraza: (\.+) \(phase (\.+)\)</regex>
+        <order>Client_ip, status, phase</order>
+</decoder>
+
+<decoder name="Coraza:Child">
+        <parent>Coraza</parent>
+        <regex>[file \\"(\.+)\\"]</regex>
+        <order>file</order>
+</decoder>
